@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>2b74cbd1-876c-4296-9c69-8d5675fd085c</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>MvvmLibrary</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)AutofacModulo\AutofacBootstrapper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AutofacModulo\AutofacModulo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BaseViewModel\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BaseViewModel\IViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Factorias\DialogService\DialogService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Factorias\DialogService\IDialogService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Factorias\Factory\IViewFactroy.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Factorias\Factory\ViewFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Factorias\Page\IPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Factorias\Navegacion\INavigator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Factorias\Navegacion\Navigator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Factorias\Page\PageProxy.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Util\ObservableRangeCollection.cs" />
+  </ItemGroup>
+</Project>

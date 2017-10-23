@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MarvelForms.Views.LoginView"
+             Title="{Binding Titulo}">
+    <StackLayout Opacity="{Binding Opacity,Mode=TwoWay}" 
+                 IsEnabled="{Binding Enabled,Mode=TwoWay}"
+                 VerticalOptions="FillAndExpand">
+
+
+        <Image Source="monoxamarin.jpg" Aspect="AspectFit" />
+        <Label Text="Login"/>
+        <Entry Text="{Binding Usuario.login}"/>
+        <Label Text="Password"/>
+        <Entry Text="{Binding Usuario.password}"/>
+        <Button Text="Login" Command="{Binding LoginCommand}"/>
+
+        <RelativeLayout>
+            <ActivityIndicator IsVisible = "{Binding IsBusy,Mode=TwoWay}"
+                               IsRunning="{Binding IsBusy,Mode=TwoWay}"
+                               VerticalOptions="CenterAndExpand"
+                               RelativeLayout.XConstraint="{ConstraintExpression
+                 Type=RelativeToView,
+                 Property=Width,Factor=0.20}"
+                               RelativeLayout.YConstraint="{ConstraintExpression
+                 Type=RelativeToView,Property=Height,
+                 Factor=0.20}"
+            />
+        </RelativeLayout>
+    </StackLayout>
+</ContentPage>

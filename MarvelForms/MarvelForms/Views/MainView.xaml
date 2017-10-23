@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MarvelForms.Views.MainView" Title="{Binding Titulo}">
+    <ContentPage.Content>
+        <ListView ItemsSource="{Binding Personajes}"
+                  SelectedItem="{Binding PersonajeSeleccionado,Mode=TwoWay}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell Text="{Binding name}" ImageSource="{Binding thumbnail.rutaImagen}"   />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
